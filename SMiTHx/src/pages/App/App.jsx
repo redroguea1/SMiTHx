@@ -1,25 +1,24 @@
 import { useState } from 'react'
 import {Routes, Route} from "react-router-dom"
 import './App.css'
+import NavBar from '../../components/NavBar/NavBar'
+import AuthPage from '../AuthPage/AuthPage'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [user, setUser] = useState([])
 
   return (
-    <div className="App">
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <main className="App">SMiTHx
+
+    { user ?
+      <NavBar />
+      :
+      <AuthPage />
+    }
+    
+    {/* NAV - events and organizations DONE user state - PENDING Body - event list and day view - TBD Footer - quotes with an API - TBD*/}
+
+    </main>
   )
 }
 
