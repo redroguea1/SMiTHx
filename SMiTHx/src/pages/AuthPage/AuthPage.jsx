@@ -1,9 +1,12 @@
 import React from 'react'
+import SignUpForm from '../../components/SignUpForm/SignUpForm';
 
 export default function AuthPage() {
   return (
-    <div>AuthPage
-        {/* SIGNUP FORM && LOGIN FORM components */}
-    </div>
-  )
+    <main>
+      <h1>AuthPage</h1>
+      {/* SIGNUP FORM && LOGIN FORM components */}
+      <SignUpForm />
+    </main>
+  );
 }
