@@ -6,6 +6,6 @@ export default function Footer() {
     //wonder if its possible to tie the quote to the session so its only calling the API for the one person accessing the site
 
   return (
-    <p>Footer/API</p>
+    <h5>footer-api</h5>
   )
 }
