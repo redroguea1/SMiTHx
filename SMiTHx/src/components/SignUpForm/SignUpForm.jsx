@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 // Initial State:
 const initialForm = {
-    name: '',
+    username: '',
     email: '',
     password: '',
     confirm: '',
@@ -33,7 +33,7 @@ export default function SignUpForm({ setUser }) {
         try {
           // Excludes unneeded properties:
           const userData = {
-            name: formData.name,
+            username: formData.username,
             email: formData.email,
             password: formData.password
           };
@@ -43,7 +43,8 @@ export default function SignUpForm({ setUser }) {
           setUser(user);
         } catch {
           // Error catch: 
-          setFormData({ error: 'Sign Up Failed - Try Again' });
+          //setFormData({ error: 'Sign Up Failed - Try Again' });
+          //setFormData(userData)
         }
       };    
     // Rendered component:
@@ -52,8 +53,8 @@ export default function SignUpForm({ setUser }) {
         <div className='SignUpForm'>
           <form autoComplete='off' onSubmit={handleSubmit}>
             <label>Name</label>
-              <input type='text' name='name'
-                value={formData.name}
+              <input type='text' name='username'
+                value={formData.username}
                 onChange={handleChange}
                 required
               />

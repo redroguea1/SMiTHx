@@ -24,4 +24,16 @@ export const events = [
         "description": "Each and Every Wednesday 🎶",
         "org": "F6ix"
     },
+    {
+        "date": "7",
+        "title": "Cannabis Equity: Grass is Greener",
+        "description": "We hope you all enjoyed yourselves and look forward to seeing you all on Wednesday the 25th for the conclusion of the documentary",
+        "org": "Cafe-X: By Any Beans Necessary"
+    },
+    {
+        "date": "18",
+        "title": "NeoSoul Tuesday",
+        "description": "Come groove with Addiktion every Tuesday at Phantom Lounge 🎶",
+        "org": "Phantom Lounge"
+    },
 ]

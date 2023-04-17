@@ -8,21 +8,23 @@ import OrgListPage from '../OrgListPage/OrgListPage'
 import Footer from '../../components/Footer/Footer'
 import { events } from '../../../data'
 import { getUser } from '../../utilities/users-service'
+import DayListPage from '../DayListPage/DayListPage'
 
 function App() {
   
-  const [user, setUser] = useState([]) //need to update useState to getUser
+  const [user, setUser] = useState(null) //need to update useState to getUser
 
   return (
     <main className="App">SMiTHx
 
     { user ?
       <>
-        <NavBar />
+        <NavBar user={user}/>
         <Routes>
           {/* HERE Will go the routes */}
           <Route path="/" element={<EventListPage events={events}/>} />
           <Route path="/orgs" element={<OrgListPage />} />
+          <Route path="/calendar/" element={<DayListPage events={events} />} />
         </Routes>
       </>
       :

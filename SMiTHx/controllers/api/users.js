@@ -8,13 +8,15 @@ module.exports = {
 async function create(req,res) {
     try {
         // Add the user to the database
+        console.log(req.body)
         const user = await User.create(req.body);
         const token = createJWT(user);
         res.json(token);
         console.log(token);
       } catch (err) {
         // Client will check for non-2xx status code 
-        // 400 = Bad Request
+        // 400 = Bad Request]
+        console.log(err)
         res.status(400).json(err);
       }
 }

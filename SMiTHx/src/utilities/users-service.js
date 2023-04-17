@@ -3,9 +3,15 @@ import * as usersAPI from './users-api'
 export async function signUp(userData) {
     // Delegate the network request code to the users-api.js API module
     // which will ultimately return a JSON Web Token (JWT)
+    try {
     const token = await usersAPI.signUp(userData);
     localStorage.setItem('token', token)
-    console.log("this is the token: " + token)
+    return getUser
+    } catch (err) {
+        // Client will check for non-2xx status code 
+        // 400 = Bad Request
+        res.status(400).json(err);
+      }
     // Baby step by returning whatever is sent back by the server
     return token;
 }

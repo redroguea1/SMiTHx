@@ -9,6 +9,8 @@ export default function NavBar() {
           <Link to="/">EventListPage</Link>
           &nbsp; | &nbsp;
           <Link to="/orgs">OrgListPage</Link>
+          &nbsp; | &nbsp;
+          <Link to="/calendar">DayListPage</Link>
       </nav>
   )
 }
