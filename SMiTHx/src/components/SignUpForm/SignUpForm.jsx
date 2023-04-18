@@ -79,8 +79,8 @@ export default function SignUpForm({ setUser }) {
               />
             <button type='submit' disabled={disabled}>SIGN UP</button>
           </form>
-        </div>
           <p className='error-message'>&nbsp;{formData.error}</p>
+        </div>
         </div>
     );
 }

@@ -10,12 +10,13 @@ import { events } from '../../../data'
 import { getUser } from '../../utilities/users-service'
 import DayListPage from '../DayListPage/DayListPage'
 
+
 function App() {
   
-  const [user, setUser] = useState([]) //need to update useState to getUser
+  const [user, setUser] = useState(null) //need to update useState to getUser
 
   return (
-    <main className="App">SMiTHx
+    <main className="App">
 
     { user ?
       <>
@@ -26,6 +27,7 @@ function App() {
           <Route path="/orgs" element={<OrgListPage />} />
           <Route path="/calendar/" element={<DayListPage events={events} />} />
         </Routes>
+        
       </>
       :
       <AuthPage setUser={setUser}/>

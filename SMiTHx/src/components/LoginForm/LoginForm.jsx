@@ -30,8 +30,11 @@ async function handleSubmit(evt) {
                 username: formData.username,
                 password: formData.password
             };
+            console.log(userData)
             // Async user creation:
+            //this is failing some how...
             const user = await userServices.login(userData);
+            console.log(user)
             // Sets user state to new user:
             setUser(user);
         } catch {
@@ -46,8 +49,8 @@ async function handleSubmit(evt) {
             <h3>Login</h3>
             <div className="form-container">
                 <form autoComplete="off" onSubmit={handleSubmit}>
-                    <label>Email</label>
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+                    <label>username</label>
+                    <input type="username" name="username" value={formData.username} onChange={handleChange} required />
                     <label>Password</label>
                     <input type="password" name="password" value={formData.password} onChange={handleChange} required />
                     <button type="submit" onClick={handleSubmit}>LOG IN</button>
