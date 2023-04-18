@@ -2,11 +2,11 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
+
 export default function EventCard({event, idx}) {
     //const {eventID} = useParams();
     //ADD Styling for my list here through div style like in movies ??
     // IS MY EVENT double wrapped? 
-    console.log(event)
   return (
      <>
         <div className="EventCard">

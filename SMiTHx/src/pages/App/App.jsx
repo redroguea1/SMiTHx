@@ -12,7 +12,7 @@ import DayListPage from '../DayListPage/DayListPage'
 
 function App() {
   
-  const [user, setUser] = useState(null) //need to update useState to getUser
+  const [user, setUser] = useState([]) //need to update useState to getUser
 
   return (
     <main className="App">SMiTHx
