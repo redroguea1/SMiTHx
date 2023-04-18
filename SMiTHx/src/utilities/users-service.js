@@ -37,3 +37,14 @@ export function getToken() {
     return token ? JSON.parse(atob(token.split('.')[1])).user : null;
   }
   
+  export function logOut() {
+    localStorage.removeItem('token');
+  }
+  
+  export async function login(credentials) {
+    // Delegate the AJAX request to the users-api.js
+    // module.
+    const token = await usersAPI.login(credentials);
+    localStorage.setItem('token', token);
+    return getUser();
+  }

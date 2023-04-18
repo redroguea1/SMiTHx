@@ -43,14 +43,15 @@ export default function SignUpForm({ setUser }) {
           setUser(user);
         } catch {
           // Error catch: 
-          //setFormData({ error: 'Sign Up Failed - Try Again' });
+          setFormData({ error: 'Sign Up Failed - Try Again' });
           //setFormData(userData)
         }
       };    
-    // Rendered component:
+
     return (
         <div>
         <div className='SignUpForm'>
+            <h3>Sign Up</h3>
           <form autoComplete='off' onSubmit={handleSubmit}>
             <label>Name</label>
               <input type='text' name='username'
