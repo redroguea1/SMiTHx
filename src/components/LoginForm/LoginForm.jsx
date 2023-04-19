@@ -52,7 +52,8 @@ async function handleSubmit(evt) {
                     <label>username</label>
                     <input type="username" name="username" value={formData.username} onChange={handleChange} required />
                     <label>Password</label>
-                    <input type="password" name="password" value={formData.password} onChange={handleChange} required />
+                    <input type="password" name="password" value={formData.password} onChange={handleChange} required /> 
+                    <hr/>
                     <button type="submit" onClick={handleSubmit}>LOG IN</button>
                 </form>
             </div>
