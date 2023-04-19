@@ -9,7 +9,7 @@ const initialForm = {
 };
 
 
-export default function LoginForm() {
+export default function LoginForm({setUser}) {
 const [formData, setFormData] = useState(initialForm)
 
 function handleChange(evt) {

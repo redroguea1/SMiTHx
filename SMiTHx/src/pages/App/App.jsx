@@ -7,17 +7,19 @@ import EventListPage from '../EventListPage/EventListPage'
 import OrgListPage from '../OrgListPage/OrgListPage'
 import Footer from '../../components/Footer/Footer'
 import { events } from '../../../data'
-import { getUser } from '../../utilities/users-service'
+//import { getUser } from '../../utilities/users-service'
 import DayListPage from '../DayListPage/DayListPage'
 
 
 function App() {
   
   const [user, setUser] = useState(null) //need to update useState to getUser
+  //JOKE Will become quote ideally when the official app launches
+
+  
 
   return (
     <main className="App">
-
     { user ?
       <>
         <NavBar user={user}/>
@@ -27,7 +29,6 @@ function App() {
           <Route path="/orgs" element={<OrgListPage />} />
           <Route path="/calendar/" element={<DayListPage events={events} />} />
         </Routes>
-        
       </>
       :
       <AuthPage setUser={setUser}/>
