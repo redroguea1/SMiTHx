@@ -15,7 +15,7 @@ export default function EventCard({event, idx}) {
                   <h3> 📅 {event.date} || {event.title}</h3>
                   <p>{event.description}</p>
                   
-                  <Link to={{ pathname:`/orgs/${event.org}` }}>{event.org}</Link>
+                 <Link to={{ pathname:`/orgs/${event.org}` }}><strong>{event.org}</strong></Link>
               </div>
         </div>
     </>

@@ -5,16 +5,17 @@ import "./NavBar.css"
 import UserLogOut from '../../components/UserLogOut/UserLogOut'
 
 export default function NavBar({user}) {
+  console.log(user)
   return (
       <nav className="NavBar">SMiTHx
         &nbsp; | &nbsp;
-          <Link to="/">EventListPage</Link>
+          <Link to="/">Events</Link>
           &nbsp; | &nbsp;
-          <Link to="/calendar">DayListPage</Link>
+          <Link to="/calendar">Days/Calendar</Link>
           &nbsp; | &nbsp;
           <UserLogOut />
           &nbsp; | &nbsp;
-          User: {user.name}
+          User: NAMEHERE...
       </nav>
   )
 }
