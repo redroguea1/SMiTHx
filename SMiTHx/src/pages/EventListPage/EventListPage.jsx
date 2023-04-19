@@ -1,5 +1,7 @@
 import React from 'react'
 import EventCard from '../../components/EventCard/EventCard'
+import "./EventListPage.css"
+
 
 export default function EventListPage({events}) {
   const eventsList = events.map((e, idx)=> 
@@ -7,8 +9,8 @@ export default function EventListPage({events}) {
 
   return (
     <>
-    <h1>Upcoming Events</h1>
-    <ul>{eventsList}</ul>
+    <h2>Upcoming Events</h2>
+    <ul className='eventsList'>{eventsList}</ul>
     </>
   )
 }

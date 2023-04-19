@@ -9,6 +9,6 @@ export default function Footer({joke}) {
     
 
   return (
-    <p>{joke}</p>
+    <p className='Footer'>{joke}</p>
   )
 }

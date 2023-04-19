@@ -14,7 +14,7 @@ export default function NavBar({user}) {
           &nbsp; | &nbsp;
           <UserLogOut />
           &nbsp; | &nbsp;
-          {user.name}
+          User: {user.name}
       </nav>
   )
 }

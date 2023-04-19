@@ -2,13 +2,14 @@
 import { logOut } from '../../utilities/users-service';
 import { Link } from 'react-router-dom';
 
-export default function UserLogOut({ user, setUser }) {
+export default function UserLogOut({ setUser }) {
   function handleLogOut() {
+    console.log("we made it to logout")
     logOut();
     setUser(null);
   }
 
   return (
-      <Link to="/" className="btn-sm" onClick={handleLogOut}>LOG OUT</Link>
+      <Link to="/" onClick={handleLogOut}>LOG OUT</Link>
   );
 }

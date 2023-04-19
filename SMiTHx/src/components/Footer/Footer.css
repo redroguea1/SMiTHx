@@ -1,4 +1,11 @@
-h5{
+.Footer {
     position: fixed;
     bottom: 0;
+    width: 100%;
+    text-align: left;
+    background-color: black;
+    margin: 0.01rem;
+    color: darkviolet;
+    font: small-caption;
+    font-style: italic;
 }

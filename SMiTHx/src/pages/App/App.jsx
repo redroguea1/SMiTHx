@@ -16,15 +16,17 @@ function App() {
   const [user, setUser] = useState(null) //need to update useState to getUser
   //JOKE Will become quote ideally when the official app launches
   const apiURL = "https://api.chucknorris.io/jokes/random";
-    const [joke, setJoke] = useState('');
+  const [joke, setJoke] = useState('');
 
     useEffect(() => {
+      //use an annoymous function to call the getJoke/getQuote
       async function getJoke() {
         const randomJoke = await fetch(`${apiURL}`)
           .then(res => res.json());
         console.log(randomJoke.value);
         setJoke(randomJoke.value);
       }
+      //need to call the function after you have declared it.
       getJoke()
     }, []);
 
@@ -41,13 +43,11 @@ function App() {
           <Route path="/orgs" element={<OrgListPage />} />
           <Route path="/calendar/" element={<DayListPage events={events} />} />
         </Routes>
+        <Footer joke={joke}/>
       </>
       :
       <AuthPage setUser={setUser}/>
     }
-    
-    {/* NAV - events and organizations DONE user state - PENDING Body - event list and day view - TBD Footer - quotes with an API - TBD*/}
-    <Footer joke={joke}/>
     </main>
   )
 }

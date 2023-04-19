@@ -17,34 +17,27 @@ export default function DayListPage({events}) {
         const tog = evt.target.value
         let idx = events.indexOf(dayView)
         if (tog === "next") {
-            console.log("before next, index is: " + idx)
             if(idx >= events.length-1) {
                 idx = 0;
                 setDayView(events[idx])
-                
                 return
             }
             idx++
             setDayView(events[idx])
         } else if (tog === "prev" ) {
             idx--
-            console.log(idx)
             if(idx < 0 ) {idx = events.length-1}
             setDayView(events[idx])
         }
-        console.log(idx)
         setDayElement(<EventCard event={dayView}/>)
     }
 
-
-
-
     
   return (
-    <>
+    <div className='dayElement'>
     <button value="prev" onClick={handleToggle}>prev</button>
     <div>{dayElement}</div>
     <button value="next" onClick={handleToggle}>next</button>
-    </>
+    </div>
   )
 }

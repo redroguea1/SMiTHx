@@ -11,14 +11,14 @@ export default function AuthPage({setUser}) {
     }
 
   return (
-      <main>
-          <h1>AuthPage</h1>
-          <button onClick={() => setToggle(!toggle)}>signup/login</button>
+      <>
+          <h2>SMiTHx</h2>
           {toggle ?
               <LoginForm setUser={setUser} />
               :
               <SignUpForm setUser={setUser} />
           }
-      </main>
+          <button onClick={() => handleToggle()}>signup/login</button>
+      </>
   );
 }
