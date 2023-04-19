@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {Routes, Route} from "react-router-dom"
 import './App.css'
 import NavBar from '../../components/NavBar/NavBar'
@@ -15,6 +15,18 @@ function App() {
   
   const [user, setUser] = useState(null) //need to update useState to getUser
   //JOKE Will become quote ideally when the official app launches
+  const apiURL = "https://api.chucknorris.io/jokes/random";
+    const [joke, setJoke] = useState('');
+
+    useEffect(() => {
+      async function getJoke() {
+        const randomJoke = await fetch(`${apiURL}`)
+          .then(res => res.json());
+        console.log(randomJoke.value);
+        setJoke(randomJoke.value);
+      }
+      getJoke()
+    }, []);
 
   
 
@@ -35,7 +47,7 @@ function App() {
     }
     
     {/* NAV - events and organizations DONE user state - PENDING Body - event list and day view - TBD Footer - quotes with an API - TBD*/}
-    <Footer/>
+    <Footer joke={joke}/>
     </main>
   )
 }
