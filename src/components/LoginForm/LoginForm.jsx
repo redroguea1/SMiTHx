@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Component } from 'react';
+
 import * as userServices from "../../utilities/users-service"
 
 const initialForm = {
@@ -30,11 +30,9 @@ async function handleSubmit(evt) {
                 username: formData.username,
                 password: formData.password
             };
-            console.log(userData)
             // Async user creation:
             //this is failing some how...
             const user = await userServices.login(userData);
-            console.log(user)
             // Sets user state to new user:
             setUser(user);
         } catch {

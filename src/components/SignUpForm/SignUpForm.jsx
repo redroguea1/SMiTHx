@@ -53,8 +53,8 @@ export default function SignUpForm({ setUser }) {
         <div className='SignUpForm'>
             <h3>Sign Up</h3>
           <form autoComplete='off' onSubmit={handleSubmit}>
-            <label>Name</label>
-              <input type='text' name='username'
+            <label></label>
+              <input type='text' name='name'
                 value={formData.username}
                 onChange={handleChange}
                 required

@@ -12,12 +12,13 @@ import DayListPage from '../DayListPage/DayListPage'
 
 
 function App() {
-  
   const [user, setUser] = useState(null) //need to update useState to getUser
+
   //JOKE Will become quote ideally when the official app launches
   const apiURL = "https://api.chucknorris.io/jokes/random";
   const [joke, setJoke] = useState('');
 
+  //Handles the Third Party API
     useEffect(() => {
       //use an annoymous function to call the getJoke/getQuote
       async function getJoke() {
@@ -30,8 +31,7 @@ function App() {
       getJoke()
     }, []);
 
-  
-
+    
   return (
     <main className="App">
     { user ?
