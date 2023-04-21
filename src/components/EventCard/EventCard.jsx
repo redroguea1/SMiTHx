@@ -5,9 +5,6 @@ import "./EventCard.css"
 
 
 export default function EventCard({event, idx}) {
-    //const {eventID} = useParams();
-    //ADD Styling for my list here through div style like in movies ??
-    // IS MY EVENT double wrapped? 
   return (
      <>
         <div className="EventCard">

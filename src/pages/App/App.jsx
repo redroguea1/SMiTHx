@@ -38,7 +38,6 @@ function App() {
       <>
         <NavBar user={user}/>
         <Routes>
-          {/* HERE Will go the routes */}
           <Route path="/" element={<EventListPage events={events}/>} />
           <Route path="/orgs" element={<OrgListPage />} />
           <Route path="/calendar/" element={<DayListPage events={events} />} />

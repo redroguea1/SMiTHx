@@ -5,7 +5,6 @@ import "./NavBar.css"
 import UserLogOut from '../../components/UserLogOut/UserLogOut'
 
 export default function NavBar({user}) {
-  console.log(user)
   return (
       <nav className="NavBar">SMiTHx
         &nbsp; | &nbsp;
